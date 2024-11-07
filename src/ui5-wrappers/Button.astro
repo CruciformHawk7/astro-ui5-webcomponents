@@ -1,0 +1,17 @@
+---
+import ButtonDesign from '@ui5/webcomponents/dist/types/ButtonDesign.js';
+
+interface Props {
+    design?: `${ButtonDesign}`
+}
+const {design = "Default"} = Astro.props;
+
+---
+<script>
+    import Button from "@ui5/webcomponents/dist/Button.js";
+</script>
+
+
+<ui5-button design={design}>
+    <slot/>
+</ui5-button>
